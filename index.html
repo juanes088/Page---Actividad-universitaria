@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Esteban Sierra</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="cabecera-interna">
+      <a href="index.html" class="nombre-sitio">Juan Esteban Sierra</a>
+      <nav class="menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#articulos">Artículos</a>
+        <button id="toggle-tema" class="boton-tema" type="button" aria-label="Cambiar a modo oscuro">&#9790;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="seccion">
+      <h1>Ese soy yo</h1>
+
+      <img src="imagenes/juan.jpg" alt="Foto de Juan Esteban Sierra" class="foto">
+
+      <p>
+        Hola, soy Juan Esteban Sierra Agudelo. Trabajo como analista de datos y
+        estoy estudiando Ingeniería de Software en la Corporación Universitaria
+        Iberoamericana. Me dedico a convertir información en algo útil: tableros,
+        indicadores y análisis que ayudan a tomar decisiones.
+      </p>
+
+      <p>
+        El día a día lo paso entre SQL, Python, pandas, Excel y Power BI. Me gusta
+        armar procesos ETL y pipelines que tomen datos desordenados y los dejen
+        limpios y confiables. He construido tableros para seguir cartera, tendencias
+        y KPIs, y también procesos de conciliación financiera con Python cuando toca
+        cuadrar cifras que no cuadran.
+      </p>
+
+      <p>
+        Además de los datos, me metí de lleno en la inteligencia artificial aplicada.
+        He trabajado en visión por computador con YOLO, entrenando y depurando
+        modelos de detección, en gestión de datasets y, más recientemente, en
+        agentes de IA: automatizaciones, integración de modelos de lenguaje y
+        búsqueda semántica (RAG) para consultar información en lenguaje natural.
+      </p>
+
+      <p>
+        He tenido la suerte de trabajar en sitios donde aprendí muchísimo: en
+        Ebroservicios (el brazo tecnológico de Ebroenergía, en España) y en inteia,
+        una empresa del grupo ISA. Este blog es mi espacio para escribir sobre lo que
+        me interesa, sobre todo lo que está pasando ahora mismo en la IA.
+      </p>
+    </section>
+
+    <section id="tecnologias" class="seccion">
+      <h2>Tecnologías que manejo</h2>
+      <div class="carrusel">
+        <div class="carrusel-pista">
+          <div class="tec"><img src="imagenes/logos/python.svg" alt="Python"><span>Python</span></div>
+          <div class="tec"><img src="imagenes/logos/pandas.svg" alt="pandas"><span>pandas</span></div>
+          <div class="tec"><img src="imagenes/logos/postgresql.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+          <div class="tec"><img src="imagenes/logos/pytorch.svg" alt="PyTorch"><span>PyTorch</span></div>
+          <div class="tec"><img src="imagenes/logos/tensorflow.svg" alt="TensorFlow"><span>TensorFlow</span></div>
+          <div class="tec"><img src="imagenes/logos/opencv.svg" alt="OpenCV"><span>OpenCV</span></div>
+          <div class="tec"><img class="logo-mono" src="imagenes/logos/yolo.svg" alt="YOLO"><span>YOLO</span></div>
+          <div class="tec"><img src="imagenes/logos/n8n.svg" alt="n8n"><span>n8n</span></div>
+          <div class="tec"><img src="imagenes/logos/git.svg" alt="Git"><span>Git</span></div>
+          <div class="tec"><img class="logo-mono" src="imagenes/logos/github.svg" alt="GitHub"><span>GitHub</span></div>
+          <div class="tec"><img class="logo-mono" src="imagenes/logos/nextdotjs.svg" alt="Next.js"><span>Next.js</span></div>
+          <!-- repito los logos para que el carrusel no se corte -->
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/python.svg" alt=""><span>Python</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/pandas.svg" alt=""><span>pandas</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/postgresql.svg" alt=""><span>PostgreSQL</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/pytorch.svg" alt=""><span>PyTorch</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/tensorflow.svg" alt=""><span>TensorFlow</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/opencv.svg" alt=""><span>OpenCV</span></div>
+          <div class="tec" aria-hidden="true"><img class="logo-mono" src="imagenes/logos/yolo.svg" alt=""><span>YOLO</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/n8n.svg" alt=""><span>n8n</span></div>
+          <div class="tec" aria-hidden="true"><img src="imagenes/logos/git.svg" alt=""><span>Git</span></div>
+          <div class="tec" aria-hidden="true"><img class="logo-mono" src="imagenes/logos/github.svg" alt=""><span>GitHub</span></div>
+          <div class="tec" aria-hidden="true"><img class="logo-mono" src="imagenes/logos/nextdotjs.svg" alt=""><span>Next.js</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="articulos" class="seccion">
+      <h2>Artículos</h2>
+      <p class="intro-articulos">
+        Algunas notas sobre inteligencia artificial actual, escritas desde lo que voy
+        aprendiendo y usando.
+      </p>
+
+      <ul class="lista-articulos">
+        <li>
+          <a href="articulo-1.html" class="titulo-articulo">Los agentes de IA: cuando el modelo deja de solo responder</a>
+          <span class="fecha">15 de septiembre de 2026</span>
+          <p class="resumen">
+            Se habla mucho de "agentes", pero ¿qué los hace distintos de un chatbot
+            normal? Una explicación sencilla de por qué son el tema del momento.
+          </p>
+        </li>
+        <li>
+          <a href="articulo-2.html" class="titulo-articulo">IA local vs. IA en la nube: ¿dónde debería correr tu modelo?</a>
+          <span class="fecha">3 de septiembre de 2026</span>
+          <p class="resumen">
+            Correr un modelo en tu propio computador o pagar por la nube. Las ventajas
+            y desventajas reales, sin marketing de por medio.
+          </p>
+        </li>
+        <li>
+          <a href="articulo-3.html" class="titulo-articulo">Por qué la IA "alucina" y cómo el RAG ayuda a controlarlo</a>
+          <span class="fecha">22 de agosto de 2026</span>
+          <p class="resumen">
+            Los modelos a veces se inventan respuestas con total seguridad. Qué es una
+            alucinación, por qué pasa y cómo la búsqueda semántica reduce el problema.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Juan Esteban Sierra Agudelo</p>
+    <p>
+      <a href="mailto:juaneste546@gmail.com">juaneste546@gmail.com</a> ·
+      Medellín, Colombia
+    </p>
+  </footer>
+</body>
+</html>

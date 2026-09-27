@@ -1,0 +1,307 @@
+/* estilos del blog */
+
+:root {
+  --texto: #1a1a1a;
+  --gris: #666;
+  --acento: #7a1f1f;
+  --linea: #ddd;
+  --fondo: #fdfdfb;
+  --superficie: #f4f2ee;
+  --ancho: 640px;
+  --header-ancho: 880px;
+}
+
+/* modo oscuro */
+:root[data-theme="dark"] {
+  --texto: #e8e5df;
+  --gris: #9a948b;
+  --acento: #d98c8c;
+  --linea: #38342f;
+  --fondo: #1a1815;
+  --superficie: #242019;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* header */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--linea);
+  padding: 0 24px;
+}
+
+.cabecera-interna {
+  max-width: var(--header-ancho);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.nombre-sitio {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  color: var(--gris);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  color: var(--acento);
+}
+
+/* boton del modo oscuro */
+.boton-tema {
+  margin-left: 18px;
+  background: none;
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  color: var(--texto);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 6px 9px;
+  font-family: inherit;
+}
+
+.boton-tema:hover {
+  border-color: var(--acento);
+  color: var(--acento);
+}
+
+/* contenido */
+main {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.seccion {
+  margin: 45px 0;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0 0 25px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--linea);
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+a {
+  color: var(--acento);
+}
+
+/* foto */
+.foto {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  object-position: center 20%;
+  float: right;
+  margin: 4px 0 15px 28px;
+  border: 1px solid var(--linea);
+  border-radius: 50%;
+}
+
+/* tecnologias (carrusel) */
+.carrusel {
+  overflow: hidden;
+  margin-top: 12px;
+  /* difumina los bordes */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
+.carrusel-pista {
+  display: flex;
+  width: max-content;
+  animation: desplazar-tec 32s linear infinite;
+}
+
+/* pausa al pasar el mouse */
+.carrusel:hover .carrusel-pista {
+  animation-play-state: paused;
+}
+
+@keyframes desplazar-tec {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.tec {
+  flex: 0 0 auto;
+  width: 138px;
+  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  padding: 20px 8px;
+  border: 1px solid var(--linea);
+  background: var(--superficie);
+  border-radius: 8px;
+}
+
+.tec img {
+  width: 40px;
+  height: 40px;
+}
+
+.tec span {
+  font-size: 14px;
+  color: var(--gris);
+  text-align: center;
+}
+
+/* estos logos son negros, en oscuro los pongo en blanco */
+:root[data-theme="dark"] .tec img.logo-mono {
+  filter: invert(1);
+}
+
+/* por si tienen el movimiento desactivado */
+@media (prefers-reduced-motion: reduce) {
+  .carrusel-pista {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+    gap: 14px;
+  }
+  .tec {
+    margin-right: 0;
+  }
+  .tec[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* lista de articulos */
+.intro-articulos {
+  color: var(--gris);
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.lista-articulos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-articulos li {
+  margin-bottom: 32px;
+}
+
+.titulo-articulo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+.titulo-articulo:hover {
+  text-decoration: underline;
+}
+
+.fecha {
+  display: block;
+  color: var(--gris);
+  font-size: 14px;
+  margin: 3px 0 8px;
+}
+
+.resumen {
+  margin: 0;
+  color: var(--texto);
+}
+
+/* cada articulo */
+.articulo {
+  margin: 45px 0;
+}
+
+.articulo h1 {
+  margin-bottom: 6px;
+}
+
+.articulo .fecha {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* footer */
+.pie {
+  max-width: var(--ancho);
+  margin: 60px auto 40px;
+  padding: 20px;
+  border-top: 1px solid var(--linea);
+  color: var(--gris);
+  font-size: 15px;
+}
+
+.pie p {
+  margin: 4px 0;
+}
+
+.pie a {
+  color: var(--gris);
+}
+
+/* celular */
+@media (max-width: 500px) {
+  body {
+    font-size: 17px;
+  }
+  .foto {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  .menu a {
+    margin-left: 12px;
+    font-size: 15px;
+  }
+}

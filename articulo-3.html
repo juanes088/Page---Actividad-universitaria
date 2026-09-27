@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por qué la IA alucina — Juan Esteban Sierra</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="cabecera-interna">
+      <a href="index.html" class="nombre-sitio">Juan Esteban Sierra</a>
+      <nav class="menu">
+        <a href="index.html#sobre-mi">Sobre mí</a>
+        <a href="index.html#tecnologias">Tecnologías</a>
+        <a href="index.html#articulos">Artículos</a>
+        <button id="toggle-tema" class="boton-tema" type="button" aria-label="Cambiar a modo oscuro">&#9790;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="articulo">
+      <h1>Por qué la IA "alucina" y cómo el RAG ayuda a controlarlo</h1>
+      <span class="fecha">22 de agosto de 2026</span>
+
+      <p>
+        Si has usado un modelo de lenguaje, seguro te ha pasado: le preguntas algo y
+        te responde con total seguridad una cosa que resulta ser falsa. Un dato
+        inventado, una cita que no existe, un nombre equivocado. A eso se le llama
+        "alucinación", y entender por qué pasa ayuda mucho a usar la IA con cabeza.
+      </p>
+
+      <h2>El modelo no busca, predice</h2>
+
+      <p>
+        La clave está en cómo funciona un modelo de lenguaje por dentro. No consulta
+        una base de datos de verdades. Lo que hace es predecir, palabra por palabra,
+        qué sigue de forma más probable según todo el texto con el que fue entrenado.
+        Es increíblemente bueno sonando coherente, pero "sonar coherente" y "ser
+        verdad" no son lo mismo.
+      </p>
+
+      <p>
+        Por eso, cuando no sabe algo, el modelo no dice "no sé": completa con lo que
+        suena razonable. Si le preguntas por un detalle muy específico que no estaba
+        claro en sus datos, se lo inventa con la misma confianza con la que dice algo
+        correcto. No miente a propósito; simplemente no distingue entre recordar y
+        rellenar.
+      </p>
+
+      <h2>Aquí entra el RAG</h2>
+
+      <p>
+        RAG viene de <em>Retrieval-Augmented Generation</em>, o generación aumentada
+        con recuperación. La idea es sencilla: antes de que el modelo responda,
+        primero buscamos información real y confiable (en tus documentos, tu base de
+        datos, lo que sea) y se la entregamos junto con la pregunta. Así el modelo no
+        responde desde lo que "recuerda", sino apoyado en un texto concreto que
+        tiene enfrente.
+      </p>
+
+      <p>
+        Es la diferencia entre pedirle a alguien que responda de memoria y darle el
+        documento abierto para que conteste mirándolo. Lo he usado para armar
+        asistentes que consultan el histórico de datos de un equipo: la persona
+        pregunta en lenguaje natural y el sistema primero encuentra los datos
+        relevantes y después redacta la respuesta con base en ellos.
+      </p>
+
+      <h2>No es magia, pero ayuda</h2>
+
+      <p>
+        El RAG no elimina las alucinaciones por completo (el modelo todavía puede
+        interpretar mal lo que le diste), pero reduce mucho el problema y, sobre
+        todo, permite verificar de dónde salió la respuesta. Para mí esa es la
+        lección más útil: la IA es una herramienta poderosa, pero conviene darle
+        buenos datos y no creerle todo a ciegas.
+      </p>
+
+      <a href="index.html#articulos" class="volver">← Volver a los artículos</a>
+    </article>
+  </main>
+
+  <footer class="pie">
+    <p>Juan Esteban Sierra Agudelo</p>
+    <p>
+      <a href="mailto:juaneste546@gmail.com">juaneste546@gmail.com</a> ·
+      Medellín, Colombia
+    </p>
+  </footer>
+</body>
+</html>
